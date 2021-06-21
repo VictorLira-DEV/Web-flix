@@ -16,10 +16,6 @@
 
 <br>
 
-# Important
-
-:key: Take a look --> 
-
 <h3 align="center"> 
 	Application status: Developed ✔️
 </h3>
