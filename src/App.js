@@ -12,25 +12,25 @@ function App() {
     const [movies, setMovies] = useState([]);
     const [searchTerm, setSearchTerm] = useState("");
 
-    useEffect(async () => {
-        getMovies(FEATURED_API);
-    }, []);
-
-    const getMovies = (API) => {
-        fetch(API)
+    useEffect(() => {
+        fetch(FEATURED_API)
             .then((res) => res.json())
             .then((data) => {
-                console.log(data);
                 setMovies(data.results);
-            });
-    };
+        });
+    }, []);
 
     function handleOnSubmit(e) {
         e.preventDefault();
 
         if (searchTerm) {
-            getMovies(SEARCH_API + searchTerm);
+            fetch(SEARCH_API + searchTerm)
+            .then((res) => res.json())
+            .then((data) => {
+            setMovies(data.results);
+
             setSearchTerm("");
+        });
         }
     }
 
