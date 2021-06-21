@@ -21,11 +21,11 @@
 </h3>
 <br>
 
-# :star: Important
+# 🎥 Important
 
 Take a look --> https://movie-app-rho-eight.vercel.app/
 
-## :star: Features
+## ⭐ Features
 - [x] search bar
 - [x] Details of a specific movie
 - [x] overview
