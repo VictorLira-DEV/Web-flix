@@ -1,10 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #22254b;
@@ -12,44 +9,37 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-.root{
+.root {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-*{
-  box-sizing: border-box;
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-header{
+header {
   background-color: #373b69;
   padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
-.movie-container{
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.movie{
-  background-color: #373b69;
-  border-radius: 3px;
-  box-shadow: 0px -3px 5px rgba(141, 109, 109, 0.1);
-  overflow: hidden;
-  margin: 1rem;
-  width: 300px;
-  position: relative;
-}
-
-.search{
+header .search {
   background-color: transparent;
   font-family: inherit;
   font-size: 1.2rem;
@@ -59,27 +49,81 @@ header{
   padding: 0.5rem 1.5rem;
 }
 
-.search:focus{
+header .search:focus {
   outline: 0;
 }
-.movie img{
+
+.movie-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.movie {
+  background-color: #373b69;
+  border-radius: 3px;
+  -webkit-box-shadow: 0px -3px 5px rgba(141, 109, 109, 0.1);
+          box-shadow: 0px -3px 5px rgba(141, 109, 109, 0.1);
+  overflow: hidden;
+  margin: 1rem;
+  width: 300px;
+  position: relative;
+}
+
+.movie:hover .movie-over {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+}
+
+.movie img {
   height: 400px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   width: 100%;
 }
 
-.movie-info{
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 1rem;
-}
-
-.movie img h3{
+.movie img h3 {
   margin: 0;
 }
 
-.movie-over{
+.movie .movie-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.movie .movie-info .tag {
+  background-color: #22254b;
+  padding: 0.5rem;
+  border-radius: 5px;
+  font-size: bold;
+}
+
+.movie .movie-info .tag.green {
+  color: #08ce08;
+}
+
+.movie .movie-info .tag.orange {
+  color: orange;
+}
+
+.movie .movie-info .tag.red {
+  color: red;
+}
+
+.movie .movie-over {
   background: #fff;
   color: #22254b;
   position: absolute;
@@ -91,29 +135,11 @@ header{
   right: 0;
   overflow: auto;
   max-height: 100%;
-  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  -webkit-transition: -webkit-transform 0.3s ease-in-out;
+  transition: -webkit-transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
 }
-
-.movie:hover .movie-over{
-  transform: translateY(0%);
-}
-
-.tag{
-  background-color: #22254b;
-  padding: 0.5rem;
-  border-radius: 5px;
-  font-size: bold;
-}
-
-.tag.green{
-  color: rgb(8, 206, 8);
-}
-
-.tag.orange{
-  color: orange;
-}
-
-.tag.red{
-  color: red;
-}
+/*# sourceMappingURL=index.css.map */
