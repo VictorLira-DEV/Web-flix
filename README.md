@@ -11,7 +11,7 @@
 # :computer: Demonstration of the application
 
 <p align="center">
-  <img src="https://ik.imagekit.io/mcvhbcq4zu/initial_tBdpaY9QL.gif" width="1400px"/>
+  <img src="https://ik.imagekit.io/mcvhbcq4zu/mobile_kDRwqZ120.gif" width="1400px"/>
 </p>
 
 <br>
